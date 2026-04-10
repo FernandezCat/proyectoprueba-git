@@ -24,8 +24,30 @@ def materias():
                 lista_cursos[j] = lista_cursos[j + 1]
                 lista_cursos[j + 1] = temporal
     
+    # -------- Curso más repetido --------
+    
+    mayor_repetido = ""
+    mayor_contador = 0
+
+    for i in range(len(lista_cursos)):
+        contador = 1
+        
+        for j in range(i + 1, len(lista_cursos)):
+            if lista_cursos[i] == lista_cursos[j]:
+                contador += 1
+        
+        if contador > mayor_contador:
+            mayor_contador = contador
+            mayor_repetido = lista_cursos[i]
+    
     print("\nCursos ordenados alfabéticamente:")
     for curso in lista_cursos:
         print(curso)
+    
+    if mayor_contador >1:
+        print("\nCurso que más repite:")
+        print(mayor_repetido, "se repite", mayor_contador, "veces")
+    else:
+        print("\nNo hay cursos repetidos")
 
 materias()
