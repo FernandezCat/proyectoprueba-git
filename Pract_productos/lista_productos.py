@@ -1,5 +1,6 @@
 lista_productos = []
 # Autor: Andru
+# Curo: Técnicas de Programación Orientada a Objetos
 def agregar_producto():
     producto = input("Ingrese el nombre del producto: ")
     
