@@ -1,5 +1,5 @@
 lista_productos = []
-
+# Autor: Andru
 def agregar_producto():
     producto = input("Ingrese el nombre del producto: ")
     
